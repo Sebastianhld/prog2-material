@@ -325,6 +325,160 @@ public class Calculator {
             return smallestPositive;
         }
 
-        
+        public static int countNegatives(int[] numbers){
+                int count = 0;
+                int i = 0;
 
+                while (i < numbers.length){
+                    if (numbers[i] < 0){
+                    count++;
+                }
+                i++;
+            }
+            return count;
+        }
+
+        public static int summePositiv(int[] numbers){
+            int summe = 0;
+            int i = 0;
+
+            while (i < numbers.length){
+                if (numbers[i] > 0){
+                    summe = (summe + numbers[i]);
+                }
+                i++;
+            }
+            return summe;
+        }
+
+        public static int furzFirstNegative(int[] numbers){
+            int i=0;
+            while (i<numbers.length){
+                if (numbers[i]<0){
+                    return numbers[i];
+                }
+                i++;
+            }
+            return 1;
+        }
+
+        public static boolean allPupsitive(int[] numbers){
+            int i=0;
+            while (i<numbers.length){
+                if (numbers[i]<=0){
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+
+        public static int zählGerade(int[] numbers){
+            int i     = 0;
+            int count = 0;
+            while (i<numbers.length){
+                if (numbers[i]%2 == 0){
+                    count++;
+                }
+                i++;
+            }
+            return count;
+        }
+
+        public static boolean containsZerrro(int[] numbers){
+            int i=0;
+                while(i<numbers.length){
+                    if (numbers[i]==0){
+                        return true;
+                    }
+                    i++;
+                }
+                return false;
+            }
+
+        public static int moritzinArray(int[] numbers){
+            int i=0;
+            int moritz = numbers[0];
+            while (i<numbers.length){
+                if (numbers[i]>moritz){
+                    moritz=numbers[i];
+                }
+                i++;
+            }
+            return moritz;
+        }
+
+        public static int findLarsPositive(int[] numbers){
+            int i=numbers.length-1;
+            while (i>0){
+                if (numbers[i]>0){
+                    return numbers[i];
+                }
+                i--;
+            }
+            return -1;
+        }
+
+        public static boolean alleGerade(int[] numbers){
+            int i=0;
+            while (i< numbers.length){
+                if (numbers[i]%2!=0){
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+
+        public static int countMinus(int[] numbers){
+            int b = 0;
+            int i = 0;
+            while (b<numbers.length){
+                if (numbers[b]>0){
+                    i++;
+                }
+                b++;
+            }
+            return i;
+        }
+
+        public static int findLarsNegative(int[] numbers){
+            int i=numbers.length-1;
+            while (i>=0){
+                if (numbers[i]<0){
+                    return numbers[i];
+                }
+                i--;
+            }
+            return -1;
+        }
+
+        public static int sumUntilZero(int[] numbers){
+            int i = 0;
+            int sum = 0;
+
+            while (i<numbers.length){
+                if (numbers[i] == 0){
+                    return sum;
+                }
+                sum += numbers[i];
+                i++;
+            }
+            return sum;
+        }
+        
+        public static int countUntilNegative(int[] numbers){
+        int i = 0;
+        int count = 0;
+
+        while (i < numbers.length){
+            if (numbers[i] < 0){
+                break;
+            }
+            count++;
+            i++;
+        }
+
+        return count;
     }
+}
